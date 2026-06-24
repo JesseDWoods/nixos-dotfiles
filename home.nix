@@ -27,13 +27,20 @@ let
 		};
 		programs.ssh = {
     			enable = true;
-    			matchBlocks = {
+    			settings = {
       				"github.com" = {
         				hostname = "github.com";
         				identityFile = "~/.ssh/id_ed25519";
       				};
     			};
   		};
+	
+  		programs.emacs = {
+    			enable = true;
+    			package = pkgs.emacs-pgtk;
+    			extraPackages = epkgs: [ epkgs.magit epkgs.vterm ];
+  		};
+
 
 		xdg.configFile = builtins.mapAttrs
 			(name: subpath: {
