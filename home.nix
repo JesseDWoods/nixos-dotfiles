@@ -49,6 +49,7 @@ let
 			waybar
 			pavucontrol
 			networkmanagerapplet
+			libreoffice
 			rust-analyzer
 			vim
 			fzf

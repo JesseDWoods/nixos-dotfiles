@@ -24,6 +24,7 @@
 				backupFileExtension = "backup";
 			};
 		}
+		./emacs.nix
 	];
     };
 

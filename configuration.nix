@@ -87,6 +87,10 @@
     layout = "us";
     variant = "";
   };
+  services.emacs = {
+    enable = true;
+    package = pkgs.emacs-pgtk; # replace with emacs-gtk, or a version provided by the community overlay if desired.
+  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
