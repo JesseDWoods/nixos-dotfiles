@@ -60,10 +60,6 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment.
-  #services.desktopManager.gnome.enable = true;
-  #services.displayManager.gdm.enable = true;
-
   #Declare new Display Manager and Desktop Portals
   services.displayManager.ly.enable = true;
   xdg.portal = {
@@ -86,10 +82,6 @@
   services.xserver.xkb = {
     layout = "us";
     variant = "";
-  };
-  services.emacs = {
-    enable = true;
-    package = pkgs.emacs-pgtk; # replace with emacs-gtk, or a version provided by the community overlay if desired.
   };
 
   # Enable CUPS to print documents.

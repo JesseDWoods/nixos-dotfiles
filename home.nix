@@ -7,6 +7,7 @@ let
 	configs = {
 		mango = "mango";
 		vim = "vim";
+		emacs = "emacs"; 
 		rofi = "rofi";
 		waybar = "waybar";
 		foot = "foot";
@@ -38,10 +39,7 @@ let
   		programs.emacs = {
     			enable = true;
     			package = pkgs.emacs-pgtk;
-    			extraPackages = epkgs: [ epkgs.magit epkgs.vterm ];
   		};
-
-
 		xdg.configFile = builtins.mapAttrs
 			(name: subpath: {
 				source = create_symlink "${dotfiles}/${subpath}";
@@ -60,6 +58,7 @@ let
 			rust-analyzer
 			vim
 			fzf
+			ripgrep
 			nodejs
 			fd
 			git
