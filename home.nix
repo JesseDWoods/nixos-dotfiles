@@ -64,5 +64,6 @@ let
 			git
 			gcc
 			clang-tools
+			foliate
 		];
 	}

@@ -43,4 +43,4 @@ set updatetime=50
 
 set laststatus=2
 
-set termwinsize=10x0
+set termwinsize=15x0
