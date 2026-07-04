@@ -20,8 +20,6 @@ endfunction
 " Your plugins
 call s:ensure('junegunn/fzf')
 call s:ensure('junegunn/fzf.vim')
-call s:ensure('wojciechkepka/vim-github-dark')
-call s:ensure('ghifarit53/tokyonight-vim')
 call s:ensure('jacoborus/tender.vim')
 call s:ensure('neoclide/coc.nvim')
 call s:ensure('ojroques/vim-oscyank')

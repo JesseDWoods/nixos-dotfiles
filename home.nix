@@ -1,4 +1,5 @@
-{ config, pkgs, ... }:
+{
+    config, pkgs, ... }:
 
 let
 	dotfiles = "${config.home.homeDirectory}/nixos-dotfiles/config";
