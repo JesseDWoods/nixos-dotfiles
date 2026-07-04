@@ -62,7 +62,7 @@ let
             ];
             events = {
                     "before-sleep" = "${pkgs.swaylock}/bin/swaylock -f";
-            }
+            };
         };	
   		programs.emacs = {
     			enable = true;
