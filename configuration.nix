@@ -58,7 +58,7 @@
   hardware.nvidia.open = true;  # see the note above
  
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  services.xserver.enable = false;
 
   #Declare new Display Manager and Desktop Portals
   services.displayManager.ly.enable = true;
@@ -97,6 +97,9 @@
     pulse.enable = true;
 
   };
+
+  #allow swaylock access to pam
+  security.pam.services.swaylock = {};
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users."jwoods" = {

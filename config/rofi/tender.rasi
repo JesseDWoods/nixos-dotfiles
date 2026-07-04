@@ -6,8 +6,8 @@
 
 // define colors etc.
 * {
-    bg: #24283b;
-    hv: #9274ca; 
+    bg: #595f89;
+    hv: #b3deef; 
     primary: #444b6a;  // TokyoNight bright black
     ug: #0B2447;
     font: "Monospace 11";
@@ -15,7 +15,7 @@
     //dark: @bg;
     border: 0px;
     kl: #7aa2f7;
-    black: #000000;
+    black: #282828;
 
     transparent: rgba(46,52,64,0);
 }

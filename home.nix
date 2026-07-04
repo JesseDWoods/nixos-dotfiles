@@ -36,7 +36,34 @@ let
       				};
     			};
   		};
-	
+		programs.swaylock = {
+    			enable = true;
+    			settings = {
+      				color = "282828";
+                    inside-color = "B3DEEF"
+                    ring-color = "FFC24B"
+      				indicator-idle-visible = false;
+      				show-failed-attempts = true;
+   			 };
+ 		 };
+
+  		services.swayidle = {
+            enable = true;
+            timeouts = [
+                {
+                    timeout = 300;
+                    command = "${pkgs.swaylock}/bin/swaylock -f";
+                }
+                {
+                    timeout = 600;
+                    command = "swaymsg 'output * dpms off'";
+                    resumeCommand = "swaymsg 'output * dpms on'";
+                }
+            ];
+            events = {
+                    "before-sleep" = "${pkgs.swaylock}/bin/swaylock -f";
+            }
+        };	
   		programs.emacs = {
     			enable = true;
     			package = pkgs.emacs-pgtk;
