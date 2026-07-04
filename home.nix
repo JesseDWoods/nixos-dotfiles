@@ -40,8 +40,8 @@ let
     			enable = true;
     			settings = {
       				color = "282828";
-                    inside-color = "B3DEEF"
-                    ring-color = "FFC24B"
+                    inside-color = "B3DEEF";
+                    ring-color = "FFC24B";
       				indicator-idle-visible = false;
       				show-failed-attempts = true;
    			 };
