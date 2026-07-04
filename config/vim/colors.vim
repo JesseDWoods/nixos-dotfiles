@@ -3,7 +3,7 @@ set termguicolors
 let g:tokyonight_style = 'night' " available: night, storm
 let g:tokyonight_enable_italic = 1
 
-colorscheme tokyonight
+colorscheme tender
 
 " Make Vim background transparent
 highlight Normal ctermbg=NONE guibg=NONE
