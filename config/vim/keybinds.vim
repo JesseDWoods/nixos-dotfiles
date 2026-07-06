@@ -64,3 +64,17 @@ map <C-t> :botright terminal<CR>
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+
+"Debugger keybinds
+nnoremap <F5> :Continue<CR>
+nnoremap <F10> :Over<CR>
+nnoremap <F11> :Step<CR>
+nnoremap <F12> :Finish<CR>
+
+" Breakpoint management maps
+nnoremap <leader>db :Break<CR>
+nnoremap <leader>dc :Clear<CR>
+
+" Inspect variables quickly
+nnoremap <leader>de :Evaluate<CR>
+

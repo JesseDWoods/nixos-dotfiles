@@ -29,6 +29,19 @@ let
 		};
 		programs.ssh = {
     			enable = true;
+			enableDefaultConfig = false;
+			settings."*" = {
+				ForwardAgent = false;
+				AddKeysToAgent = "no";
+				Compression = false;
+				ServerAliveInterval = 0;
+				ServerAliveCountMax = 3;
+				HashKnownHosts = false;
+				UserKnownHostsFile = "~/.ssh/known_hosts";
+				ControlMaster = "no";
+				ControlPath = "~/.ssh/master-%r@%n:%p";
+				ControlPersist = "no";
+			};
     			settings = {
       				"github.com" = {
         				hostname = "github.com";
@@ -55,12 +68,10 @@ let
                     			command = "${pkgs.swaylock}/bin/swaylock -f";
                 		}
             		];
-			events = [
-    				{
-      					event = "before-sleep";
-      					command = "${pkgs.swaylock}/bin/swaylock";
-    				}
-  			];
+			events = {
+  				before-sleep = "${pkgs.swaylock}/bin/swaylock -fF";
+  				#"lock" = "lock";
+			};
         	};	
   		programs.emacs = {
     			enable = true;

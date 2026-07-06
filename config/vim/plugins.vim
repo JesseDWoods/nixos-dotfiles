@@ -17,11 +17,14 @@ function! s:ensure(repo)
   execute 'set runtimepath+=' . fnameescape(path)
 endfunction
 
+"Add GDB Debugger
+packadd termdebug
+
 " Your plugins
 call s:ensure('junegunn/fzf')
 call s:ensure('junegunn/fzf.vim')
 call s:ensure('jacoborus/tender.vim')
-call s:ensure('neoclide/coc.nvim')
+call s:ensure('yegappan/lsp')
 call s:ensure('ojroques/vim-oscyank')
 call s:ensure('tpope/vim-commentary')
 call s:ensure('itchyny/lightline.vim')
